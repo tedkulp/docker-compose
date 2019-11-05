@@ -140,6 +140,14 @@ export const rm = function (options?: IDockerComposeOptions): Promise<IDockerCom
   return execCompose('rm', [ '-f' ], options);
 };
 
+export const rmMany = function (services: string[], options?: IDockerComposeOptions): Promise<IDockerComposeResult> {
+  return execCompose('rm', [ '-f' ].concat(services), options);
+};
+
+export const rmOne = function (service: string, options?: IDockerComposeOptions): Promise<IDockerComposeResult> {
+  return execCompose('rm', [ '-f', service ], options);
+};
+
 export const exec = function (container: string, command: string | string[], options?: IDockerComposeOptions): Promise<IDockerComposeResult> {
   const args = Array.isArray(command) ? command : command.split(/\s+/);
 
