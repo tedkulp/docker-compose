@@ -1,5 +1,5 @@
 {
-  "name": "docker-compose",
+  "name": "docker-compose-tedkulp",
   "version": "0.23.1",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -8,11 +8,11 @@
     "test": "jest test --verbose",
     "eslint": "eslint src/**/*.ts test/**/*.ts",
     "build": "tsc",
-    "prepare": "tsc",
+    "prepublishOnly": "tsc",
     "release": "yarn build && standard-version"
   },
   "repository": {
-    "url": "git@github.com:PDMLab/docker-compose.git"
+    "url": "git@github.com:tedkulp/docker-compose.git"
   },
   "keywords": [
     "devops",
