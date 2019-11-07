@@ -95,5 +95,10 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
   }
 }
